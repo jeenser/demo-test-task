@@ -30,8 +30,10 @@ jobs:
     - name: Run Tests
       run: mvn clean test
       continue-on-error: true
+      
     - name: Run Allure
       run: mvn allure:report
+      
     - name: Upload Allure Report
       uses: actions/upload-artifact@v4
       with:
