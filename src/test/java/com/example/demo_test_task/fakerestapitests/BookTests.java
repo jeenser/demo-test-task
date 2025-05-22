@@ -62,7 +62,8 @@ public class BookTests extends BaseTest {
                 .publishDate("xxx")
                 .build();
         var response = bookService.create(book);
-        Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));;
+        Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));
+        ;
     }
 
     @Test
@@ -76,13 +77,15 @@ public class BookTests extends BaseTest {
                 .publishDate("2025-05-21T22:26:14.684Z")
                 .build();
         var response = bookService.update(3, book);
-        Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));;
+        Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
+        ;
         Assertions.assertThat(response.getBody()).isEqualTo(book);
     }
 
     @Test
     void testDeleteExistingBookReturns200() {
         var response = bookService.delete(1);
-        Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));;
+        Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
+        ;
     }
 }

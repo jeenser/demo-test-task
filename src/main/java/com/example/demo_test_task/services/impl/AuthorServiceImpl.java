@@ -21,7 +21,8 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public ResponseEntity<List<Author>> getAll() {
-        return httpClient.execute(GET_AUTHORS, new TypeToken<List<Author>>() {});
+        return httpClient.execute(GET_AUTHORS, new TypeToken<List<Author>>() {
+        });
     }
 
     @Override
@@ -46,6 +47,7 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public ResponseEntity<List<Author>> getAuthorsByBookId(Integer idBook) {
-        return httpClient.execute(GET_AUTHOR_BOOKS, new TypeToken<List<Author>>() {}, idBook);
+        return httpClient.execute(GET_AUTHOR_BOOKS, new TypeToken<List<Author>>() {
+        }, idBook);
     }
 }

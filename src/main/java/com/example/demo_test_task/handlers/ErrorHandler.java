@@ -11,7 +11,7 @@ import java.net.URI;
 import java.nio.charset.Charset;
 
 @Slf4j
-public class ErrorHandler implements ResponseErrorHandler  {
+public class ErrorHandler implements ResponseErrorHandler {
 
     @Override
     public boolean hasError(ClientHttpResponse response) throws IOException {
