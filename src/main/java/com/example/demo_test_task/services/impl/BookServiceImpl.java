@@ -19,7 +19,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public ResponseEntity<List<Book>> getAll() {
-        return httpClient.execute(GET_BOOKS, new TypeToken<List<Book>>() {
+        return httpClient.execute(GET_BOOKS, new TypeToken<>() {
         });
     }
 

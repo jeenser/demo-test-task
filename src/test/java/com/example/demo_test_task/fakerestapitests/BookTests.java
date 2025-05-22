@@ -63,7 +63,6 @@ public class BookTests extends BaseTest {
                 .build();
         var response = bookService.create(book);
         Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));
-        ;
     }
 
     @Test
@@ -78,7 +77,6 @@ public class BookTests extends BaseTest {
                 .build();
         var response = bookService.update(3, book);
         Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
-        ;
         Assertions.assertThat(response.getBody()).isEqualTo(book);
     }
 
@@ -86,6 +84,5 @@ public class BookTests extends BaseTest {
     void testDeleteExistingBookReturns200() {
         var response = bookService.delete(1);
         Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
-        ;
     }
 }

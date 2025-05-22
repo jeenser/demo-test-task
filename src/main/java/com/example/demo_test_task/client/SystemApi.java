@@ -14,7 +14,6 @@ public enum SystemApi {
     // Authors
     GET_AUTHORS(GET, "/Authors"),
     CREATE_AUTHOR(POST, "/Authors"),
-    GET_AUTHOR_BOOKS(GET, "/Authors/authors/books/{idBook}"),
     GET_AUTHOR_BY_ID(GET, "/Authors/{id}"),
     UPDATE_AUTHOR(PUT, "/Authors/{id}"),
     DELETE_AUTHOR(DELETE, "/Authors/{id}"),
